@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c3dad8;
+}
+
+.music-player {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+.music-player-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.background-image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.prev-button, .next-button {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.play-pause-button {
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.prev-button:hover,
+.next-button:hover,
+.play-pause-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.track-info {
+    padding: 20px;
+}
+
+.track-info h2, .track-info h3 {
+    margin: 0;
+}
+
+.track-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.track-info h3 {
+    font-size: 18px;
+    color: #666;
+}
+
+.seek-slider {
+    padding: 20px;
+}
+
+.seek-slider input[type="range"] {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.seek-slider input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.volume-slider {
+    padding: 20px;
+}
+
+.volume-slider input[type="range"] {
+    width: 10%; /* Smaller width for the volume slider */
+    height: 3px;
+    border-radius: 5px;
+    background-color: #ccc;
+    outline: none;
+}
+
+.volume-slider input[type="range"]::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.volume-slider i {
+    font-size: 18px;
+    color: #333;
+    margin: 0 10px;
+}
+
+.volume-slider i:hover {
+    color: #666;
+}
